@@ -1,0 +1,84 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Constant Sizes
+//
+$height-header:        70px;
+$semi-fluid:           1370px;
+$dashboard-offset:     3.5rem;
+
+//== Colors
+//
+//## Gray and brand colors
+
+$gray-base:             #000;
+$gray-darker:           lighten($gray-base, 13.5%); // #222
+$gray-dark:             #4A515F;
+$gray:                  #808291;
+$gray-light:            #C7D3D6;
+$gray-lighter:          #EFF1F2;
+
+$brand-primary:         #ffca28;
+$brand-secondary:       #212529;
+$brand-success:         #5cb85c;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+$aside-bg:              #ffffff;
+
+
+//== Typography
+//
+//## Font Families
+
+$font-family-serif:       'Maison Neue', sans-serif !important;
+$font-family-base:        'Trump Gothic East', sans-serif !important;
+$font-family-ionIcons:    'Ionicons';
+
+
+//== Media queries breakpoints
+//
+//## Breakpoints at which your layout will change
+
+// Extra small screen / phone
+$screen-xs:                  480px;
+$screen-xs-min:              $screen-xs;
+
+// Extra small screen 2 / phone
+$screen-xs-2:                577px;
+$screen-xs-min-2:            $screen-xs-2;
+
+// Small screen / tablet
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+
+// Medium screen / desktop
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max-2:            ($screen-xs-min-2 - 1);
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1060;
+$zindex-tooltip:           1070;
+$zindex-navbar-fixed:      1030;
+$zindex-modal-background:  1040;
+$zindex-aside:             1050;
+$zindex-modal:             1050;

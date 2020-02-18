@@ -1,0 +1,113 @@
+.dump-layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: $gray-lighter;
+  justify-content: center;
+  @media screen and (max-width: $screen-xs-max-2) {
+    justify-content: flex-start;
+    :global {
+      .container {
+        padding: 0;
+      }
+    }
+  }
+}
+
+:global {
+  .wizard-wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow: initial;
+    @media screen and (max-width: $screen-sm-max) {
+      flex-direction: column;
+    }
+  }
+  .wizard-inner {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(400px - 4rem);
+    max-width: 100%;
+    //&:not(:only-child) {
+    //  &:not(.fadeInLeft-enter-done) {
+    //    display: none;
+    //  }
+    //}
+  }
+}
+
+:global {
+  .btn-google-sign, .btn-facebook-sign {
+    font-family: $font-family-serif;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 46px;
+    line-height: 1;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+    padding: 0 1.2rem;
+    @media screen and (max-width: $screen-sm-max) {
+      font-size: 13px;
+      height: 40px;
+      line-height: 40px;
+    }
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-size: 20px;
+      margin-right: 1rem;
+    }
+  }
+  .btn-google-sign {
+    &:before {
+      background-image: url('/static/img/icons/google.svg');
+    }
+  }
+  .btn-facebook-sign {
+    &:before {
+      background-image: url('/static/img/icons/facebook.svg');
+    }
+  }
+  .fadeInLeft-enter {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  .fadeInLeft-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .fadeInLeft-exit {
+    opacity: 1;
+  }
+  .fadeInLeft-exit-active {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+

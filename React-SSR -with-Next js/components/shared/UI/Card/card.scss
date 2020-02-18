@@ -1,0 +1,53 @@
+.app-card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &--center {
+    align-items: center;
+  }
+  &--left {
+    align-items: flex-start;
+  }
+  &--right {
+    align-items: flex-end;
+  }
+  &.is-mobile-flat {
+    .app-card {
+      @media screen and (max-width: $screen-xs-max-2) {
+        border-radius: 0;
+        min-height: 100vh;
+        @include box-shadow(none);
+      }
+    }
+  }
+}
+
+.app-card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow: unset;
+  padding: 1rem;
+  @include box-shadow(rgba(86, 103, 146, 0.1) 0 9px 30px 0);
+  @include transition(0.7s);
+  &--flat {
+    background: transparent;
+    border-radius: 0;
+    @include box-shadow(none);
+  }
+  @media screen and (max-width: $screen-xs-max-2) {
+    width: 100% !important;
+  }
+}
+
+:global {
+  .card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray;
+    margin-bottom: 1rem;
+  }
+}

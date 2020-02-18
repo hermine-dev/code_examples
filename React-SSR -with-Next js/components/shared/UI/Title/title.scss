@@ -1,0 +1,107 @@
+.app-title {
+  font-family: $font-family-base;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  &__sub {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+  }
+  &__par {
+    display: block;
+    font-family: $font-family-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: $gray !important;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 1.5rem 0 0 0;
+  }
+  &--center {
+    text-align: center;
+    & ~ .app-title__underline {
+      margin: 1.5rem auto 1rem auto;
+    }
+  }
+  &--right {
+    text-align: right;
+    & ~ .app-title__underline {
+      margin: 1.5rem 0 1rem auto;
+    }
+  }
+  &--left {
+    text-align: left;
+  }
+  &--light {
+    color: #ffffff !important;
+  }
+  &--dark {
+    color: $brand-secondary;
+  }
+  &--gray {
+    color: $gray;
+  }
+  &--xs {
+    font-size: 1.65rem;
+  }
+  &--sm {
+    font-size: 2rem;
+  }
+  &--md {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  &--lg {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  &--xl {
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+  &--xxl {
+    font-size: 5rem;
+    letter-spacing: 2px;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--serif {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    &.app-title--xs {
+      font-size: 0.95rem;
+      font-weight: 500;
+      @media screen and (max-width: $screen-sm-max) {
+        font-size: 14px;
+      }
+    }
+    &.app-title--sm {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      @media screen and (max-width: $screen-sm-max) {
+        font-size: 17px;
+      }
+    }
+    &.app-title--md {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+  }
+  &--base {
+    font-family: $font-family-base;
+  }
+  &__underline {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: $brand-primary;
+    margin: 1.5rem auto 1rem 0;
+  }
+}
